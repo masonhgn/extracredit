@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listings</title>
+</head>
+<body>
+    <h1>Listings</h1>
+
+    <!-- Display houses -->
+    <h2>Houses</h2>
+    <ul>
+        {% for house in houses %}
+            <li>{{ house.address }} - Price: ${{ house.price }}</li>
+            <ul>
+                <li>Bedrooms: {{ house.bedrooms }}</li>
+                <li>Bathrooms: {{ house.bathrooms }}</li>
+                <li>Size: {{ house.size }} sq. ft.</li>
+            </ul>
+        {% endfor %}
+    </ul>
+
+    <!-- Display business properties -->
+    <h2>Business Properties</h2>
+    <ul>
+        {% for business_property in business_properties %}
+            <li>{{ business_property.address }} - Price: ${{ business_property.price }}</li>
+            <ul>
+                <li>Type: {{ business_property.type }}</li>
+                <li>Size: {{ business_property.size }} sq. ft.</li>
+            </ul>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Back to Homepage</a>
+</body>
+</html>

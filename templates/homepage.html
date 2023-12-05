@@ -11,15 +11,53 @@
     <p>View all listings and their associated property info.</p>
     <a href="{{ url_for('display_listings') }}">View Listings</a>
 
-    <!-- Link to search houses -->
-    <h2>Search Houses:</h2>
-    <p>Search houses based on price range, number of bedrooms, and number of bathrooms.</p>
-    <a href="{{ url_for('search_houses') }}">Search Houses</a>
+    <h1>Search Houses</h1>
+    <form action="/search_houses" method="GET">
+        <label for="min_price">Minimum Price:</label>
+        <input type="text" id="min_price" name="min_price">
+        <br>
+        <label for="max_price">Maximum Price:</label>
+        <input type="text" id="max_price" name="max_price">
+        <br>
 
-    <!-- Link to search business properties -->
-    <h2>Search Business Properties:</h2>
-    <p>Search business properties based on price range and size in square feet.</p>
-    <a href="{{ url_for('search_business_properties') }}">Search Business Properties</a>
+        <label for="min_bedrooms">Minimum Bedrooms:</label>
+        <input type="text" id="min_bedrooms" name="min_bedrooms">
+        <br>
+        <label for="max_bedrooms">Maximum Bedrooms:</label>
+        <input type="text" id="max_bedrooms" name="max_bedrooms">
+        <br>
+
+        <label for="min_bathrooms">Minimum Bathrooms:</label>
+        <input type="text" id="min_bathrooms" name="min_bathrooms">
+        <br>
+
+        <label for="max_bathrooms">Maximum Bathrooms:</label>
+        <input type="text" id="max_bathrooms" name="max_bathrooms">
+        <br>
+
+        <input type="submit" value="Search">
+    </form>
+
+    <h1>Search Business Properties</h1>
+    <form action="/search_business_properties" method="GET">
+        <label for="min_price">Minimum Price:</label>
+        <input type="text" id="min_price" name="min_price">
+        <br>
+        <label for="max_price">Maximum Price:</label>
+        <input type="text" id="max_price" name="max_price">
+        <br>
+
+        <label for="min_size">Minimum Size:</label>
+        <input type="text" id="min_size" name="min_size">
+        <br>
+        <label for="max_size">Maximum Size:</label>
+        <input type="text" id="max_size" name="max_size">
+        <br>
+
+        <input type="submit" value="Search">
+    </form>
+
+
 
     <!-- Link to view all agents -->
     <h2>Agents:</h2>
