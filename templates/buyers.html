@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Buyers</title>
+</head>
+<body>
+    <h1>List of Buyers</h1>
+    <table>
+        <tr>
+            <th>Buyer ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Property Type</th>
+            <th>Bedrooms</th>
+            <th>Bathrooms</th>
+            <th>Business Property Type</th>
+            <th>Min Price</th>
+            <th>Max Price</th>
+        </tr>
+        {% for buyer in buyers %}
+            <tr>
+                <td>{{ buyer.id }}</td>
+                <td>{{ buyer.name }}</td>
+                <td>{{ buyer.phone }}</td>
+                <td>{{ buyer.propertyType }}</td>
+                <td>{{ buyer.bedrooms }}</td>
+                <td>{{ buyer.bathrooms }}</td>
+                <td>{{ buyer.businessPropertyType }}</td>
+                <td>${{ buyer.minimumPreferredPrice }}</td>
+                <td>${{ buyer.maximumPreferredPrice }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

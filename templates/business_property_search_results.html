@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Business Properties Search Results</title>
+</head>
+<body>
+    <h1>Business Properties Search Results</h1>
+    <table>
+        <tr>
+            <th>Address</th>
+            <th>Type</th>
+            <th>Size</th>
+            <th>Price</th>
+        </tr>
+        {% for business_property in business_properties %}
+            <tr>
+                <td>{{ business_property.address }}</td>
+                <td>{{ business_property.type }}</td>
+                <td>{{ business_property.size }} sq. ft.</td>
+                <td>${{ business_property.price }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

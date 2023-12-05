@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real Estate Homepage</title>
+</head>
+<body>
+    <h1>Welcome to Our Real Estate App</h1>
+
+    <!-- Link to view all listings -->
+    <h2>Listings:</h2>
+    <p>View all listings and their associated property info.</p>
+    <a href="{{ url_for('display_listings') }}">View Listings</a>
+
+    <!-- Link to search houses -->
+    <h2>Search Houses:</h2>
+    <p>Search houses based on price range, number of bedrooms, and number of bathrooms.</p>
+    <a href="{{ url_for('search_houses') }}">Search Houses</a>
+
+    <!-- Link to search business properties -->
+    <h2>Search Business Properties:</h2>
+    <p>Search business properties based on price range and size in square feet.</p>
+    <a href="{{ url_for('search_business_properties') }}">Search Business Properties</a>
+
+    <!-- Link to view all agents -->
+    <h2>Agents:</h2>
+    <p>View all agents and their associated info.</p>
+    <a href="{{ url_for('display_agents') }}">View Agents</a>
+
+    <!-- Link to view all buyers -->
+    <h2>Buyers:</h2>
+    <p>View all buyers and their associated info, including preferences.</p>
+    <a href="{{ url_for('display_buyers') }}">View Buyers</a>
+</body>
+</html>
+
